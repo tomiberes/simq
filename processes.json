@@ -1,0 +1,18 @@
+{
+  "apps":
+  [
+    {
+      "name": "consumer one",
+      "script": "consumer/app.js",
+      "args": ["--port=3001", "--exchange=lospolloshermanos", "--routingKey=badger",]
+    },{
+      "name": "consumer two",
+      "script": "consumer/app.js",
+      "args": ["--port=3002", "--exchange=lospolloshermanos", "--routingKey=combo"]
+    },{
+      "name": "producer",
+      "script": "producer/app.js",
+      "args": ["--port=4000", "--exchange=lospolloshermanos", "--routingKeys=badger combo"]
+    }
+  ]
+}
